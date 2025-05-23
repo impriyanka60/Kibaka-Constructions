@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const Proj = () => {
   const [projectImages, setProjectImages] = useState([]);
 
-  useEffect(() => {
+ 
     const fetchImages = async () => {
       try {
         const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/get-images`, {
@@ -19,7 +19,7 @@ const Proj = () => {
         console.error("Error fetching project images:", err);
       }
     };
-
+    useEffect(() => {
     fetchImages();
   }, []);
 

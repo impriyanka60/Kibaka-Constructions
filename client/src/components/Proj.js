@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const Proj = () => {
   const [projectImages, setProjectImages] = useState([]);
-  const API = process.env.REACT_APP_API_BASE_URL;
+  const API = "https://kibaka-backend.onrender.com";
     useEffect(() => {
     const fetchImages = async () => {
       try {

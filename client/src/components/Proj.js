@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 
 const Proj = () => {
   const [projectImages, setProjectImages] = useState([]);
-
- 
+  const API = process.env.REACT_APP_API_BASE_URL;
+    useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/get-images`, {
+        const res = await fetch(`${API}/api/get-images`, {
           credentials: 'include',
           headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": process.env.REACT_APP_API_BASE_URL,
+            "Access-Control-Allow-Origin": API,
           },
         });
         const data = await res.json();
@@ -19,7 +19,7 @@ const Proj = () => {
         console.error("Error fetching project images:", err);
       }
     };
-    useEffect(() => {
+   
     fetchImages();
   }, []);
 
@@ -31,7 +31,7 @@ const Proj = () => {
           projectImages.map((img) => (
             <div key={img._id} style={styles.card}>
               <img
-                src={`${process.env.REACT_APP_API_BASE_URL}${img.url}`}
+                src={`${API}${img.url}`}
                 alt="Project"
                 style={styles.image}
               />

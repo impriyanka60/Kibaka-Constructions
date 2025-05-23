@@ -9,7 +9,7 @@ const adminRoutes = require('./routes/adminRoutes');
 
 const app = express();
 const corsOptions = {
-  origin: process.env.FRONTEND_URL,
+  origin: 'https://kibaka-frontend.onrender.com',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],

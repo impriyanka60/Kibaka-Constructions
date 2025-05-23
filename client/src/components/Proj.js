@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 
 const Proj = () => {
   const [projectImages, setProjectImages] = useState([]);
-  const API = "https://kibaka-backend.onrender.com";
+  //const API = "https://kibaka-backend.onrender.com";
     useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await fetch(`${API}/api/get-images`, {
+        const res = await fetch(`https://kibaka-backend.onrender.com/api/get-images`, {
           credentials: 'include',
           headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": API,
+            "Access-Control-Allow-Origin": "https://kibaka-frontend.onrender.com",
           },
         });
         const data = await res.json();
@@ -31,7 +31,7 @@ const Proj = () => {
           projectImages.map((img) => (
             <div key={img._id} style={styles.card}>
               <img
-                src={`${API}${img.url}`}
+                src={`https://kibaka-backend.onrender.com${img.url}`}
                 alt="Project"
                 style={styles.image}
               />

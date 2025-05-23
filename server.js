@@ -1,23 +1,22 @@
 require('dotenv').config();
 const express = require("express");
-
+const cors = require("cors");
 const mongoose = require("mongoose");
 const path = require("path");
-const cors = require("cors");
+
 const adminRoutes = require('./routes/adminRoutes');
 
 
 const app = express();
-const allowedOrigin = process.env.FRONTEND_URL;
-
-
-// Middleware
-//app.use(cors()); // <--- important
-app.use(cors({
-  origin: allowedOrigin,
+const corsOptions = {
+  origin: process.env.FRONTEND_URL,
   credentials: true,
-}));
-//app.use(cors({ origin: allowedOrigin, credentials: true }));
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+
+app.use(cors(corsOptions));
 
 //app.use(cors({
  // origin: process.env.FRONTEND_URL ,

@@ -1,0 +1,68 @@
+.why-choose-us-section {
+    background-color: #181818;
+    padding: 80px 20px;
+    color: #F5F5EF;
+  }
+  
+  .why-choose-us-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .why-choose-us-container .section-title {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+    color: #EADF9A; /* Elegant contrast against dark background */
+  }
+  
+  .points-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+  }
+  
+  .point-card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .point-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .icon {
+    color: #1A2B4C;
+    font-size: 1.7rem;
+    margin-top: 4px;
+  }
+  
+  .point-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+  
+  .point-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  .yellow-line {
+    width: 400px;
+    height: 4px;
+    background-color: #FDD835; /* Soft vibrant yellow */
+    margin: 10px auto 30px;
+    border-radius: 2px;
+  }
+  

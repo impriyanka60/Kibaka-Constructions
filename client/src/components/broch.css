@@ -1,0 +1,59 @@
+.brochure-section {
+  background: #F6F7F9; /* Soft modern off-white/gray */
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  color: #2E2E2E; /* Deep grey for text */
+}
+
+.brochure-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 40px;
+  align-items: center;
+}
+
+.brochure-images {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.brochure-images img {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Smoother shadow */
+  transition: transform 0.3s ease;
+}
+
+.brochure-images img:hover {
+  transform: scale(1.03);
+}
+
+.brochure-content {
+  max-width: 500px;
+}
+
+.brochure-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  color: #1E2A5A; /* Deep navy for headers */
+}
+
+.download-btn {
+  background: #1E2A5A; /* Matching navy theme */
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #0f1b3a;
+}

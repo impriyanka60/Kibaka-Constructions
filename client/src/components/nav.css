@@ -1,0 +1,109 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fce4ec;
+  
+   
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    
+    position: fixed;         /* Make it fixed at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; 
+  }
+  
+  .navbar-logo h1 {
+    margin: 0;
+    color: #e91e63;
+    font-size: 24px;
+  }
+  
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Navbar Links */
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 998;   
+  }
+  
+  .navbar-links li {
+    position: relative;
+  }
+  
+  .navbar-links a,
+  .dropdown-toggle {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .navbar-links a:hover,
+  .dropdown-toggle:hover {
+    color: #e91e63;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 1000;
+  }
+  
+  .dropdown-menu li {
+    margin: 8px 0;
+  }
+  
+  .dropdown-menu a {
+    color: #333;
+  }
+  
+  .dropdown-menu a:hover {
+    color: #e91e63;
+  }
+  
+  /* Mobile Styles */
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      position: absolute;
+      top: 65px;
+      left: 0;
+      right: 0;
+      background-color: #fce4ec;
+      display: none;
+      padding: 20px;
+    }
+  
+    .navbar-links.open {
+      display: flex;
+    }
+  
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      padding-left: 20px;
+    }
+  }
+  

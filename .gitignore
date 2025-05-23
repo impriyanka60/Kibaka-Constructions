@@ -1,0 +1,16 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore environment variables
+.env
+
+# Ignore log files
+logs/
+*.log
+
+# Ignore uploaded files (optional)
+uploads/*
+!uploads/.keep
+
+# Ignore build outputs (if any)
+dist/

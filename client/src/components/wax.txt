@@ -1,0 +1,8 @@
+ const handleLogin = () => {
+    if (password === "admin123") {
+      localStorage.setItem("isAdmin", "true");
+      navigate("/admin-dashboard");
+    } else {
+      alert("Incorrect password");
+    }
+  };

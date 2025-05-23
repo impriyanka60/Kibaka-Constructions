@@ -1,0 +1,85 @@
+.brochure-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: #f4f6fb; /* optional soft background */
+}
+
+.brochure-text {
+  flex: 1 1 350px;
+  max-width: 600px;
+}
+
+.brochure-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1f2a40;
+}
+
+.brochure-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.download-btn {
+  background-color: #165e52;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #0d4b40;
+}
+
+.brochure-slider {
+  flex: 1 1 300px;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.brochure-slider img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+  .brochure-container {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .brochure-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .brochure-text p {
+    font-size: 1rem;
+  }
+
+  .download-btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .brochure-slider {
+    max-width: 100%;
+  }
+
+  .brochure-slider img {
+    width: 90%;
+  }
+}

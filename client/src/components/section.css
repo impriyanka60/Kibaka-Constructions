@@ -1,0 +1,112 @@
+/* Location Section */
+.location-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 220px;
+}
+
+.location-text {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.map-wrapper {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.specifications-section {
+  background-color: #B4ADA5;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.specifications-section .section-title {
+  font-size: 2.5rem;
+  color: #1a2b4c;
+  margin-bottom: 40px;
+}
+
+.spec-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.spec-list li {
+  position: relative;
+  font-size: 1.1rem;
+  color: #333;
+  padding-left: 25px;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 15px 20px 15px 35px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.spec-list li::before {
+  content: "•";
+  color: #1e3a5f;
+  font-size: 1.3rem;
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+
+
+/* Amenities Section */
+.amenities-section {
+  background-color: #F5F5EF;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.amenities-section .section-title {
+  font-size: 2.5rem;
+  color: #1A2B4C;
+  margin-bottom: 30px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.amenity-card {
+  background-color: #1A2B4C;
+  color: #F5F5EF;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.amenity-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+.yellow-line {
+  width: 400px;
+  height: 4px;
+  background-color: #FDD835; /* Soft vibrant yellow */
+  margin: 10px auto 30px;
+  border-radius: 2px;
+}

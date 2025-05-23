@@ -1,0 +1,112 @@
+/* Document Section Styling */
+.document-section {
+  padding: 60px 20px;
+  background-color: #F4F6F9; /* Soft, clean background */
+  text-align: center;
+}
+
+/* Flex container for Image & Document Info */
+.document-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px; 
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #fefefe, #f1f1f1);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Image Styling */
+.document-image {
+  width: 40%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.document-image:hover {
+  transform: scale(1.05);
+}
+
+/* Document Info Section */
+.document-info {
+  max-width: 500px;
+  text-align: left;
+}
+
+.document-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e2a5a;
+  margin-bottom: 12px;
+}
+
+.document-info p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+/* Button Styling */
+.document-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  border: none;
+}
+
+/* View Button */
+.view-btn {
+  background: #F6B100;
+  color: #1e1e1e;
+}
+
+.view-btn:hover {
+  background: #d99d00;
+}
+
+/* Download Button */
+.download-btn {
+  background: #2A6F6F;
+  color: white;
+}
+
+.download-btn:hover {
+  background: #215959;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .document-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .document-image {
+    width: 80%;
+  }
+
+  .document-info {
+    text-align: center;
+  }
+
+  .button-group {
+    justify-content: center;
+  }
+}

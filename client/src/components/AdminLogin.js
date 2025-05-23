@@ -8,7 +8,7 @@ const AdminLogin = () => {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/admin/login`, { password });
+      const res = await axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/admin/login`, { password }, { withCredentials: true });
 
       // Save token in localStorage
       localStorage.setItem("adminToken", res.data.token);

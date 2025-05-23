@@ -6,7 +6,13 @@ const Proj = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/get-images`);
+        const res = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/get-images`, {
+          credentials: 'include',
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": process.env.REACT_APP_API_BASE_URL,
+          },
+        });
         const data = await res.json();
         setProjectImages(data);
       } catch (err) {

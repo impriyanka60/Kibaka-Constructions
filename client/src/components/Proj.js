@@ -10,7 +10,7 @@ const Proj = () => {
           credentials: 'include',
           headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "https://kibaka-backend.onrender.com",
+           
           },
         });
         const data = await res.json();

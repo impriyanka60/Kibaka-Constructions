@@ -6,7 +6,7 @@ const AdminDashboard = () => {
   const API = process.env.REACT_APP_API_BASE_URL;
   // Fetch images for Projects section only
   useEffect(() => {
-    fetch(`${API}/api/get-images`)
+    fetch(`${API}/api/get-images`,{credentials: "include",})
       .then((res) => res.json())
       .then((data) => setImages(data))
       .catch((err) => console.error("Error fetching images:", err));
@@ -32,6 +32,7 @@ const token= localStorage.getItem("adminToken");
           Authorization: `Bearer ${token}`
         },
         body: formData,
+        credentials: "include",
       });
 
       if (response.ok) {
@@ -57,6 +58,7 @@ const token= localStorage.getItem("adminToken");
         headers: {
           Authorization: `Bearer ${token}`
         },
+        credentials: "include",
       });
 
       if (response.ok) {

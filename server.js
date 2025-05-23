@@ -8,12 +8,22 @@ const adminRoutes = require('./routes/adminRoutes');
 
 
 const app = express();
+const allowedOrigin = process.env.FRONTEND_URL || "https://kibaka-frontend.onrender.com";
+
 
 // Middleware
 //app.use(cors()); // <--- important
 app.use(cors({
-  origin: process.env.FRONTEND_URL ,
-  credentials: true
+  origin: allowedOrigin,
+  credentials: true,
+}));
+//app.use(cors({
+ // origin: process.env.FRONTEND_URL ,
+  //credentials: true
+//}));
+app.options("*", cors({
+  origin: allowedOrigin,
+  credentials: true,
 }));
 
 app.use(express.json());
